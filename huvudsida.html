@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <title>Nexa systems</title>
@@ -68,20 +68,24 @@
 
   <h4 id="kontaktaOss">Kontakta oss</h4>
   
-  <form id="kontaktformulär">
-    <label for="namn">Namn:</label>
-    <input type="text" id="namn" namn="namn" >
+  <form id="kontaktformulär" class="form">
+    <label for="name">Namn:</label>
+    <input type="text" id="name" name="name" >
+    <span id="nameFeedback"></span>
 
-    <label for="telefonnummer">Telefonnummer:</label>
-    <input type="text" id="telefonnummer" telefonnummer="telefonnummer" >
+    <label for="phone">Telefonnummer:</label>
+    <input type="text" id="phone" name="phone" >
+    <span id="phoneFeedback"></span>
 
     <label for="email">Email:</label>
-    <input type="email" id="email" email="email" >
+    <input type="email" id="email" name="email" >
+    <span id="emailFeedback"></span>
 
-    <label for="meddelande">Meddelande:</label>
-    <textarea id="meddelande" namn="meddelande" rows="5"></textarea>
+    <label for="message">Meddelande:</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+    <span id="messageFeedback"></span>
 
-    <button type="skicka-in">Skicka</button>
+    <button type="submit">Skicka</button>
 
   </form>
 
