@@ -2,65 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexa systems</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" id="menuIcon">&#9776;</label>
-     <img src="logga.png" alt="bild på vår logga">
-     <ul id="meny">
-        <li> <a href ="#anställda"> Anställda</a></li>
-        <li> <a href="#omOss">Om oss</a></li>
-        <li> <a href="#kontaktaOss">Kontakta oss</a></li>
-    </ul>
-  </header>
+        <img src="logga.png" alt="Bild på vår logga">
+        <ul id="meny">
+          <li> <a href ="#anställda"> Anställda</a></li>
+          <li> <a href="#omOss">Om oss</a></li>
+          <li> <a href="#kontaktaOss">Kontakta oss</a></li>
+        </ul>
+    </header>
 
-<h1>Nexa systems</h1>
-<a id="omOss"><h2>Om oss</h2></a>
+<div class="grid-container">
+
+  <div class="grid-item item1"><h1>Nexa systems</h1></div>
+  <div class="grid-item item2"><h2 id="omOss">Om oss</h2>
 <p>Vi är ett engagerat team på fyra systemvetare med varierade kompetenser. Vi har en gemensam passion för att skapa smarta och effektiva it-lösningar.
 </p>
 <p>Tillsammans arbetar vi för att förstå våra kunders behov och förvandla komplexa utmaningar till innovativa, skräddarsydda lösningar som skapar verkligt värde.</p>
+  </div>
+  </div>
 
-<a id= "anställda"><h3>Anställda</h3></a>
-
+<h3 id= "anställda">Anställda</h3>
 <div class="BilderAnställda">
-<img src="Anställd1.png" alt="bild på en av de anställda på Nexa systems">
-<p>Minna Seger</p>
-<p>Position: Back-endutvecklare</p>
-<p>Ansvarar för att bygga och underhålla de system som körs "bakom kuliserna". Arbetar främst med servrar, databaser och logik.</p>
-<a href="minna.html" class="läs-mer">Läs mer</a>
+  <div class="anställd">
+    <img src="Anställd1.png" alt="bild på en av de anställda på Nexa systems">
+    <p>Minna Seger</p>
+    <p>Position: Back-endutvecklare</p>
+    <p>Ansvarar för att bygga och underhålla de system som körs "bakom kuliserna". Arbetar främst med servrar, databaser och logik.</p>
+    <a href="minna.html" class="läs-mer">Läs mer</a>
+  </div>
 
+  <div class="anställd">
+    <img src="Anställd2.png" alt="bild på en av de anställda på Nexa systems">
+    <p>Henrik Engelhart</p>
+    <p>Position: UX-designer</p>
+    <p>Fokuserar på att skapa en användarvänlig och engagerande upplevelse i de digitala produkterna. Tar fram skisser, prototyper och flöden som hjälper utvecklare att bygga system.</p>
+    <a href="hillevi.html" class="läs-mer">Läs mer</a>
+  </div>
 
-<img src="Anställd2.png" alt="bild på en av de anställda på Nexa systems">
-<p>Henrik Engelhart</p>
-<p>Position: UX-designer</p>
-<p>Fokuserar på att skapa en användarvänlig och engagerande upplevelse i dem digitala produkterna. Tar fram skisser, prototyper och flöden som hjälper utvecklare att bygga system.</p>
-<a href="hillevi.html" class="läs-mer">Läs mer</a>
+  <div class="anställd">
+    <img src="Anställd3.png" alt="bild på en av de anställda på Nexa systems">
+    <p>Ellen Schöldborg</p>
+    <p>Position: Front-endutvecklare</p>
+    <p>Arbetar med de delar av systemet som användaren ser och integrerar med. Jobbar tätt med UX-designers för att skapa ett bra användargränssnitt som är både snyggt och lätt att använda.</p>
+    <a href="ellen.html" class="läs-mer">Läs mer</a>
+  </div>
 
-
-<img src="Anställd3.png" alt="bild på en av de anställda på Nexa systems">
-<p>Ellen Schöldborg</p>
-<p>Position: Front-endutvecklare</p>
-<p>Arbetar med de delar av systemet som användaren ser och integrerar med. Jobbar tätt med UX-designers för att skapa ett bra användargränssnitt som är både snyggt och lätt att använda.</p>
-<a href="ellen.html" class="läs-mer">Läs mer</a>
-
-
-<img src="Anställd4.png" alt="bild på en av de anställda på Nexa systems">
-<p>Harun Atic</p>
-<p>Position: IT-arkitekt</p>
-<p>Ansvarar för att planera och utforma den tekniska strukuren. Ser till att alla delar av systemet fungerar bra tillsammans.</p>
-<a href="harun.html" class="läs-mer">Läs mer</a>
-
+  <div class="anställd">
+    <img src="Anställd4.png" alt="bild på en av de anställda på Nexa systems">
+    <p>Harun Atic</p>
+    <p>Position: IT-arkitekt</p>
+    <p>Ansvarar för att planera och utforma den tekniska strukturen. Ser till att alla delar av systemet fungerar bra tillsammans.</p>
+    <a href="harun.html" class="läs-mer">Läs mer</a>
+  </div>
 </div>
 
 
 
-  <a id="kontaktaOss"><h4>Kontakta oss</h4></a>     
+  <h4 id="kontaktaOss">Kontakta oss</h4>
+  
+  <form id="kontaktformulär">
+    <label for="namn">Namn:</label>
+    <input type="text" id="namn" namn="namn">
+
+    <label for="telefonnummer">Telefonnummer:</label>
+    <input type="text" id="telefonnummer" telefonnummer="telefonnummer">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" email="email">
+
+    <label for="meddelande">Meddelande:</label>
+    <textarea id="meddelande" namn="meddelande" rows="5"></textarea>
+
+  </form>
+
+
 </body>
 </html>
