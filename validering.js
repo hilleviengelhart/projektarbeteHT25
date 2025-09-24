@@ -72,3 +72,11 @@ form.addEventListener("submit", function(e) {
     alert("Fyll i alla fält korrekt innan du skickar.");
   }
 });
+
+//stänger menyn 
+document.querySelectorAll('#meny a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('menu-toggle').checked = false;
+  });
+})
+
