@@ -99,7 +99,7 @@ p {
 .anställd img {
     width: 220px;
     max-width: 220px;
-    height: 220px;
+    height: auto;
     border-radius: 15%;
     transition: all 0.3s ease-in-out;
     object-fit: cover;
