@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Minna Seger - Nexa Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #projekt-lista {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .projekt {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .projekt h3 { margin-top: 0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">⬅ Tillbaka</a>
+  </header>
+
+  <h1>Minna Seger</h1>
+  <img src="Anställd1.png" alt="Bild på Minna Seger" width="200">
+  <p><strong>Roll:</strong> Back-endutvecklare</p>
+  <p>Jag har arbetat som back-endutvecklare i drygt tre år, där jag ansvarar för att bygga och underhålla de system som körs bakom kulisserna. Mitt fokus ligger på servrar, databaser och den logik som får våra applikationer att fungera stabilt och effektivt.</p>
+
+  <p>Det som driver mig i arbetet är möjligheten att lösa komplexa problem och skapa strukturer som andra kan bygga vidare på. Jag brinner för att optimera prestanda, säkra dataflöden och hitta smarta lösningar som både utvecklare och slutanvändare får nytta av.</p>
+
+  <p>För mig handlar back-end-utveckling inte bara om kod, utan också om att förstå helheten - från arkitektur och skalbarhet till hur olika system kan integreras på bästa sätt. Att se hur min kod bidrar till en stabil helhetsupplevelse för användarna är det som gör arbetet mest givande.</p>
+
+  <h2>Mina projekt</h2>
+  <div id="projekt-lista"></div>
+
+  <!-- Axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- JS-kod för att hämta projekt -->
+  <script src="script-minna.js"></script>
+</body>
+</html>
