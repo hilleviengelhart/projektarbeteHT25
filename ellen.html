@@ -6,19 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ellenStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="ellenScript.js" defer></script>
 </head>
 <body>
     <header>
         <img src="logga.png" alt="bild på Nexa Systems logga">
     </header>
-    <h1>Ellen Schöldborg</h1>
-    <img src="Anställd3.png" alt="Bild på en anställd på Nexa Systems" class="ellenBild">
-    <p>Jag arbetar som Front-endutvecklare på Nexa Systems, vi brinner för att skapa moderna, hållbara och användarvänliga digitala lösningar.</p>
-    <p>Som front end-utvecklare har jag fokus på att bygga gränssnitt som är både tilltalande och funktionella.</p>
-    <p>Jag arbetar dagligen med tekniker som HTML, CSS, JavaScript och moderna ramverk, där jag omsätter kundernas behov och designskisser till levande, responsiva webbmiljöer.</p>
-    <p>På Nexa Systems samarbetar jag nära med vår UX-designer men även våran backend-utvecklare, jag värdesätter teamet som en central del av våra framgångsrika projekt.</p>
-    <p>Jag tycker att den bästa koden är den som gör vardagen enklare för människor, oavsett om det gäller en kundportal, en mobilapplikation eller ett internt system.</p>
-    <p>När jag inte kodar ägnar jag mig gärna tid åt att hålla mig uppdaterad på de senaste trenderna inom webbutveckling. Jag deltar ofta i workshops och inspirationsföreläsningar, och ser det som en självklarhet att ständigt utvecklas i min roll.</p>
+    <div class="grid-container">
+        <div class="grid-item item1"><h1>Ellen Schöldborg - Front-endutvecklare</h1></div>
+        <div class="grid-item item2"><img src="Anställd3.png" alt="Bild på en anställd på Nexa Systems" class="ellenBild"></div>
+        <div class="grid-item item3"><p>Jag arbetar som Front-endutvecklare på Nexa Systems, vi brinner för att skapa moderna, hållbara och användarvänliga digitala lösningar. Som front end-utvecklare har jag fokus på att bygga gränssnitt som är både tilltalande och funktionella. Jag arbetar dagligen med tekniker som HTML, CSS, JavaScript och moderna ramverk, där jag omsätter kundernas behov och designskisser till levande, responsiva webbmiljöer.</p>
+        <p>På Nexa Systems samarbetar jag nära med vår UX-designer men även våran backend-utvecklare, jag värdesätter teamet som en central del av våra framgångsrika projekt.</p>
+        <p>Jag tycker att den bästa koden är den som gör vardagen enklare för människor, oavsett om det gäller en kundportal, en mobilapplikation eller ett internt system.</p>
+        <p>När jag inte kodar ägnar jag mig gärna tid åt att hålla mig uppdaterad på de senaste trenderna inom webbutveckling. Jag deltar ofta i workshops och inspirationsföreläsningar, och ser det som en självklarhet att ständigt utvecklas i min roll.</p></div>
+        <div class="grid-item item4"><h2>Bilder från jobbet:</h2></div>
+    </div>
+
+    <div class="slideshow-container">
+        <img id="slideshow-image" src="" alt="Bild i bildspel">
+            <div class="button-container">
+                <button id="tillbakaBtn" class="tillbakaBtn">Tillbaka</button>
+                <button id="nästaBtn" class="nästaBtn">Nästa</button>
+            </div>
+    </div>
+
 </body>
 
 </html>
