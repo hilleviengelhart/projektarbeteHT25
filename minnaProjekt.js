@@ -1,13 +1,11 @@
 const projektLista = document.getElementById("projekt-lista");
 
-axios.get("projekt.json")
+// Hämta projekt från JSON
+axios.get("./minnaProjekt.json")
   .then(response => {
     const data = response.data;
 
-    // Filtrera ut Minnas projekt
-    const minnasProjekt = data.filter(projekt => projekt.anstalld === "minna");
-
-    minnasProjekt.forEach(projekt => {
+    data.forEach(projekt => {
       const div = document.createElement("div");
       div.classList.add("projekt");
 
@@ -23,5 +21,51 @@ axios.get("projekt.json")
   })
   .catch(error => {
     console.error("Fel vid inläsning av projekt:", error);
-    projektLista.innerHTML = "<p>Kunde inte ladda projekt 😢</p>";
+    projektLista.innerHTML = "<p>Kunde inte ladda projekt </p>";
   });
+
+
+// ==========================
+// Bildspel
+// ==========================
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".föregående");
+const nextBtn = document.querySelector(".nästa");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? "block" : "none";
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+}
+
+// Event listeners för knapparna
+if (nextBtn && prevBtn) {
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+}
+
+// Visa första bilden
+showSlide(currentIndex);
+
+//fylla skillbar
+
+window.addEventListener('DOMContentLoaded', () => {
+    const skillFills = document.querySelectorAll('.skill-fill');
+
+    skillFills.forEach(fill => {
+        const percentage = fill.getAttribute('data-percentage');
+        fill.style.width = percentage;
+    });
+});
+

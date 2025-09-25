@@ -3,30 +3,35 @@
     "titel": "Webbshop för kläder",
     "kund": "Fashion AB",
     "beskrivning": "En responsiv e-handelssida för kläder.",
-    "merInfo": "Byggd i React med Node.js backend och Stripe-betalningar."
+    "merInfo": "Byggd i React med Node.js backend och Stripe-betalningar.",
+    "anstalld": "minna"
   },
   {
     "titel": "Portfolio för fotograf",
     "kund": "Anna Svensson",
     "beskrivning": "En snygg portfolio med bildgalleri.",
-    "merInfo": "Byggd med HTML, CSS Grid och lite JavaScript för bildvisning."
+    "merInfo": "Byggd med HTML, CSS Grid och lite JavaScript för bildvisning.",
+    "anstalld": "minna"
   },
   {
     "titel": "Tidbokningssystem",
     "kund": "Klipp & Fint",
     "beskrivning": "System för kunder att boka tider online.",
-    "merInfo": "PHP + MySQL backend, enkel frontend i Bootstrap."
+    "merInfo": "PHP + MySQL backend, enkel frontend i Bootstrap.",
+    "anstalld": "minna"
   },
   {
     "titel": "Kommunens infosida",
     "kund": "Stadskommun",
     "beskrivning": "En modern och tillgänglig informationsportal.",
-    "merInfo": "Byggd med WordPress och anpassade plugins."
+    "merInfo": "Byggd med WordPress och anpassade plugins.",
+    "anstalld": "minna"
   },
   {
     "titel": "Mobilapp för träning",
-    "kund": "FitLife",
+    "kund": "HealthLife",
     "beskrivning": "En app som hjälper användare att följa träningspass.",
-    "merInfo": "Utvecklad i React Native med Firebase som backend."
+    "merInfo": "Utvecklad i React Native med Firebase som backend.",
+    "anstalld": "minna"
   }
 ]
