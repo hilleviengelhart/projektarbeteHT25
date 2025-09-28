@@ -23,6 +23,11 @@ header img, header .logga {
     height: auto;
 }
 
+#minnaHuvudbild{
+  margin: 0 auto;
+  display: block;
+}
+
 /* --- Meny ikoner och toggling --- */
 #menuIcon {
     font-size: 2rem;
@@ -90,13 +95,13 @@ header img, header .logga {
     h1 { font-size: 3rem; }
     h2, h3, h4 { font-size: 2rem; }
 
-    .BilderAnställda {
+    .bildspel {
         grid-template-columns: repeat(2, 1fr); /* två kolumner på större skärm */
         padding: 2rem;
     }
 
-    .anställd img {
-        width: 20%;
+    .bildspel img {
+        width: 100%;
         max-width: none;
     }
 
@@ -141,11 +146,12 @@ p {
 
 .bildspel {
   position: relative;
+  margin: 0 auto;
   max-width: 600px; /* maxbredd på bildspelet */
   width: 100%;      /* fyller hela sin grid-ruta */
   aspect-ratio: 4/3; /* behåller proportioner (går att ändra) */
   overflow: hidden;
-  background: #2c6fa3;  /* bakgrund ifall bilden inte fyller ut */
+  background: #5984a5;  /* bakgrund ifall bilden inte fyller ut */
 }
 
 .slide {
@@ -160,7 +166,7 @@ p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
+  background-color: #5984a5;
   color: white;
   border: none;
   padding: 12px;
@@ -171,15 +177,15 @@ p {
 }
 
 .föregående {
-  left: 10px;  /* placerad 10px från vänster */
+  left: 40px;  /* placerad 10px från vänster */
 }
 
 .nästa {
-  right: 10px; /* placerad 10px från höger */
+  right: 40px; /* placerad 10px från höger */
 }
 
 .föregående:hover, .nästa:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: #3072a4;
 }
 
 
@@ -219,7 +225,7 @@ p {
 .skill-fill {
     height: 100%;
     width: 0;
-    background-color: #4caf50;
+    background-color: #3072a4;
     border-radius: 10px;
     transition: width 5s ease-in-out; /* Här sker animationen */
 }
