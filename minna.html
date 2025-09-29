@@ -16,30 +16,58 @@
         <label for="menu-toggle" id="menuIcon">&#9776;</label>
         <img src="logga.png" alt="Bild på vår logga">
         <ul id="meny">
-          <li> <a href ="huvudsida.html"><img src="minnaHem.png" alt="hem"/></a></li>
           <li> <a href ="#omMig"> Om mig</a></li>
           <li> <a href="#minaBilder">Mina bilder</a></li>
           <li> <a href="#minaProjekt">Projekt</a></li>
           <li> <a href="#minaKompetenser">Kompetenser</a></li>
+          <li> <a href ="huvudsida.html"><img src="minnaHem.png" alt="hem" class="hem-icon"></a></li>
           
 
         </ul>
   </header>
 
-  <h1>Minna Seger</h1>
-        <img src="Anställd1.png" alt="Bild på Minna Seger" id="minnaHuvudbild">
-        <p><strong>Roll:</strong> Back-endutvecklare</p>
-        <p>Jag har arbetat som back-endutvecklare i drygt tre år, där jag ansvarar för att bygga och underhålla de system som körs bakom kulisserna. Mitt fokus ligger på servrar, databaser och den logik som får våra applikationer att fungera stabilt och effektivt.</p>
-        <p>Det som driver mig i arbetet är möjligheten att lösa komplexa problem och skapa strukturer som andra kan bygga vidare på. Jag brinner för att optimera prestanda, säkra dataflöden och hitta smarta lösningar som både utvecklare och slutanvändare får nytta av.</p>
-        <p>För mig handlar back-end-utveckling inte bara om kod, utan också om att förstå helheten - från arkitektur och skalbarhet till hur olika system kan integreras på bästa sätt. Att se hur min kod bidrar till en stabil helhetsupplevelse för användarna är det som gör arbetet mest givande.</p>
+<div class="grid-container">
+  <div class="grid-left">
+    <h1>Minna Seger</h1>
+    <img src="Anställd1.png" alt="Bild på Minna Seger" id="minnaHuvudbild">
+  </div>
+
+  <div class="grid-right">
+    <h2>Mina kompetenser</h2>
+    <div class="skill">
+      <p>HTML</p>
+      <div class="skill-bar">
+        <div class="skill-fill" data-percentage="90%"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>CSS</p>
+      <div class="skill-bar">
+        <div class="skill-fill" data-percentage="80%"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="skill-bar">
+        <div class="skill-fill" data-percentage="70%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-description">
+    <p><strong>Roll:</strong> Back-endutvecklare</p>
+    <p>Jag har arbetat som back-endutvecklare i drygt tre år, där jag ansvarar för att bygga och underhålla de system som körs bakom kulisserna. Mitt fokus ligger på servrar, databaser och den logik som får våra applikationer att fungera stabilt och effektivt.</p>
+    <p>Det som driver mig i arbetet är möjligheten att lösa komplexa problem och skapa strukturer som andra kan bygga vidare på. Jag brinner för att optimera prestanda, säkra dataflöden och hitta smarta lösningar som både utvecklare och slutanvändare får nytta av.</p>
+    <p>För mig handlar back-end-utveckling inte bara om kod, utan också om att förstå helheten - från arkitektur och skalbarhet till hur olika system kan integreras på bästa sätt. Att se hur min kod bidrar till en stabil helhetsupplevelse för användarna är det som gör arbetet mest givande.</p>
+  </div>
+</div>
 
 
 
   
-    <h2>Bildspel</h2>
- 
-
+    <h3>Bildspel</h3>
   <!-- Bildspel i en egen grid-ruta -->
+  <div class="grid-bildspel">
   <div class="bildspel">
     <img class="slide" src="minnaBild1.png" alt="En bild när Minna arbetar">
     <img class="slide" src="minnaBild2.png" alt="En bild när Minna arbetar">
@@ -49,37 +77,16 @@
     <button class="föregående">&#10094;</button>
     <button class="nästa">&#10095;</button>
   </div>
+  </div>
 
 
 
-  <h3>Mina kompetenser</h3>
- <div class="skills-container">
-        <div class="skill">
-            <p>HTML</p>
-            <div class="skill-bar">
-                <div class="skill-fill" data-percentage="90%"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <p>CSS</p>
-            <div class="skill-bar">
-                <div class="skill-fill" data-percentage="80%"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <p>JavaScript</p>
-            <div class="skill-bar">
-                <div class="skill-fill" data-percentage="70%"></div>
-            </div>
-            </div>
-            </div>
 
 
-  <h4>Mina projekt</h4>
-    <div id="projekt-lista"></div>
-
+<h4>Mina projekt</h4>
+<div class="grid-projekt">
+  <div id="projekt-lista"></div>
+</div>
 
 
   <!-- Axios -->

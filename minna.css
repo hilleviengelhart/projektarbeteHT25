@@ -1,5 +1,6 @@
-
-/* --- Grundläggande stil --- */
+/* =========================
+   Grundläggande stil
+========================= */
 body {
     font-family: "Roboto", sans-serif;
     color: #333;
@@ -9,7 +10,9 @@ body {
     padding: 0;
 }
 
-/* --- Header --- */
+/* =========================
+   Header
+========================= */
 header {
     display: flex;
     align-items: center;
@@ -18,17 +21,17 @@ header {
     padding: 1em 1.5em;
 }
 
-header img, header .logga {
-    width: 130px;
+header img,
+.hem-icon {
     height: auto;
 }
 
-#minnaHuvudbild{
-  margin: 0 auto;
-  display: block;
-}
+header img { width: 130px; }
+.hem-icon { width: 30px; }
 
-/* --- Meny ikoner och toggling --- */
+/* =========================
+   Meny och toggling
+========================= */
 #menuIcon {
     font-size: 2rem;
     color: white;
@@ -36,9 +39,7 @@ header img, header .logga {
     display: block;
 }
 
-#menu-toggle {
-    display: none; 
-}
+#menu-toggle { display: none; }
 
 #meny {
     position: fixed;
@@ -54,65 +55,21 @@ header img, header .logga {
     z-index: 1000;
 }
 
-#meny li {
-    margin-bottom: 1.5rem;
-}
+#meny li { margin-bottom: 1.5rem; }
 
 #meny a {
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
     font-size: 1.2rem;
     display: block;
     padding: 0.5rem 0;
 }
 
-#menu-toggle:checked ~ #meny {
-    left: 0;
-}
+#menu-toggle:checked ~ #meny { left: 0; }
 
-/* --- Mobilanpassning med media queries --- */
-@media (min-width: 768px) {
-#menuIcon {
-        display: none; 
-}
-
-#meny {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        background: #2c6fa3;
-        height: auto;
-        width: auto;
-        padding: 0;
-        margin-left: auto; 
-        transition: none;
-    }
-
-    #meny li {
-        margin: 0 1rem;
-    }
-
-    h1 { font-size: 3rem; }
-    h2, h3, h4 { font-size: 2rem; }
-
-    .bildspel {
-        grid-template-columns: repeat(2, 1fr); /* två kolumner på större skärm */
-        padding: 2rem;
-    }
-
-    .bildspel img {
-        width: 100%;
-        max-width: none;
-    }
-
-    p {
-        font-size: 1.2rem;
-        padding: 0 2rem;
-    }
-}
-
-
-/* --- Rubriker --- */
+/* =========================
+   Rubriker
+========================= */
 h1, h2, h3, h4 {
     font-weight: 700;
     text-transform: uppercase;
@@ -121,104 +78,104 @@ h1, h2, h3, h4 {
     margin: 2rem 0 1rem 0;
 }
 
-h1 { font-size: 2.2rem; } /* mindre på mobiler */
+h1 { font-size: 2.2rem; }
 h2, h3, h4 { font-size: 1.6rem; }
 
-/* --- Paragrafer --- */
+/* =========================
+   Paragrafer
+========================= */
 p {
     font-size: 1rem;
     margin: 1rem 0;
     padding: 0 1rem;
-    text-align: center;
+    text-align: left;
 }
 
-/* bildspelet*/
+/* =========================
+   Grid-layouts
+========================= */
+/* Presentation grid */
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr; /* rubrik i smal kolumn, bildspel i bredare */
-  gap: 20px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "left right"
+        "desc desc";
+    gap: 20px;
+    align-items: start;
+    padding: 20px;
+    height: auto;
+    grid-auto-rows: auto;
 }
 
-.grid-item {
-  padding: 10px;
-}
+.grid-left 
+{ 
+  grid-area: left; 
 
-.bildspel {
-  position: relative;
-  margin: 0 auto;
-  max-width: 600px; /* maxbredd på bildspelet */
-  width: 100%;      /* fyller hela sin grid-ruta */
-  aspect-ratio: 4/3; /* behåller proportioner (går att ändra) */
-  overflow: hidden;
-  background: #5984a5;  /* bakgrund ifall bilden inte fyller ut */
 }
-
-.slide {
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Pilarna */
-.föregående, .nästa {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #5984a5;
-  color: white;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 24px;
-  user-select: none;
-}
-
-.föregående {
-  left: 40px;  /* placerad 10px från vänster */
-}
-
-.nästa {
-  right: 40px; /* placerad 10px från höger */
-}
-
-.föregående:hover, .nästa:hover {
-  background-color: #3072a4;
+.grid-right 
+{ 
+  grid-area: right;
+    background-color: #e0f0fb; /* välj den färg du vill ha */
+    padding: 15px;
+    border-radius: 20px; /* rundade hörn om du vill */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* valfritt skuggeffekt */
+    width: 60%;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 
-    #projekt-lista {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .projekt {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .projekt h3 { margin-top: 0; }
-
-    /*skillbar*/
-
-    .skill {
-    margin-bottom: 20px;
+.grid-description { 
+    grid-area: desc; 
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: visible;
+    height: auto;
 }
 
-.skill p {
-    margin: 0 0 5px 0;
+/* Bildspel grid (centrerat) */
+.grid-bildspel {
+    display: grid;
+    place-items: center;
+    margin: 2rem 0;
 }
+
+/* Projektgrid */
+.grid-projekt,
+#projekt-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-projekt { padding: 20px; }
+#projekt-lista { margin-top: 20px; }
+
+/* =========================
+   Bild och presentation
+========================= */
+#minnaHuvudbild {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================
+   Skillbar
+========================= */
+.skill { margin-bottom: 20px; }
+
+.skill p { margin: 0 0 5px 0; }
 
 .skill-bar {
-    width: 20%;
+    width: 100%;
     background-color: #ddd;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible;
     height: 25px;
 }
 
@@ -227,5 +184,99 @@ p {
     width: 0;
     background-color: #3072a4;
     border-radius: 10px;
-    transition: width 5s ease-in-out; /* Här sker animationen */
+    transition: width 5s ease-in-out;
+}
+
+/* =========================
+   Bildspel
+========================= */
+.bildspel {
+    position: relative;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: visible;
+    background: #5984a5;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Bildspels-pilar */
+.föregående, .nästa {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #5984a5;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    user-select: none;
+}
+
+.föregående { left: 40px; }
+.nästa { right: 40px; }
+
+.föregående:hover,
+.nästa:hover { background-color: #3072a4; }
+
+/* =========================
+   Projektkort
+========================= */
+.projekt {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.projekt h3 { margin-top: 0; }
+
+/* =========================
+   Responsiv design
+========================= */
+@media (max-width: 768px) {
+    /* Meny */
+    #menuIcon { display: block; }
+    #meny { position: fixed; left: -220px; }
+
+    /* Presentation grid */
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "left"
+            "right"
+            "desc";
+    }
+
+    /* Projektgrid */
+    .grid-projekt { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 768px) {
+    /* Meny på desktop */
+    #menuIcon { display: none; }
+
+    #meny {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: #2c6fa3;
+        height: auto;
+        width: auto;
+        padding: 0;
+        margin-left: auto;
+        transition: none;
+    }
+
+    #meny li { margin: 0 1rem; }
 }
