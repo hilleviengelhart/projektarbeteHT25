@@ -2,10 +2,10 @@
    Grundläggande stil
 ========================= */
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Lora', serif;
     color: #333;
     line-height: 1.6;
-    background: linear-gradient(to bottom, #1f6ca7, #cde2f7);
+    background: linear-gradient(to bottom, #07375c, #b0d1f3);
     margin: 0;
     padding: 0;
 }
@@ -22,7 +22,7 @@ header {
 
     top: 0;
     z-index: 10000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header img,
@@ -87,6 +87,7 @@ header img
 ========================= */
 h1, h2, h3, h4 {
     font-weight: 700;
+    font-family: "Roboto", sans-serif;
     text-transform: capitalize;
     color: #042b48;
     text-align: center;
@@ -129,7 +130,8 @@ h2, h3, h4 {
 .grid-left-image img {
     width: auto;
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     margin: 0 auto;
 }
 
@@ -138,6 +140,7 @@ h2, h3, h4 {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 60%;
 
 }
 
@@ -145,9 +148,9 @@ h2, h3, h4 {
    Beskrivning
 ========================= */
 .grid-description { 
-    background-color: #bbd9f8;
+    background-color: #b0d1f3;
     padding: 20px 30px;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 
 }
@@ -214,6 +217,7 @@ h2, h3, h4 {
 }
 
 
+
 /* =========================
    Skill bars
 ========================= */
@@ -235,9 +239,9 @@ h2, h3, h4 {
 .skill-fill {
     height: 100%;
     width: 0;
-    background-color: #3072a4;
+    background-color: #f9bf61;
     border-radius: 10px;
-    transition: width 2s ease-in-out;
+    transition: width 5s ease-in-out;
 }
 
 /* =========================
@@ -261,7 +265,7 @@ h2, h3, h4 {
 .projekt {
     width: 80%;
     max-width: 350px;
-    background: #f5a623;
+    background: #f9bf61;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -300,9 +304,15 @@ h2, h3, h4 {
   .grid-right {
         flex: 1; /* tar resten av raden */
         max-width: 160px; /* begränsar bredden så det inte blir jättestort */
-        padding: 10px;
+        padding: 8px;
+        font-size: 0.8rem;
         box-sizing: border-box;
     }
+
+  .skill-bar{
+    max-width: 120px;
+    height: 18px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -326,4 +336,22 @@ h2, h3, h4 {
 @media (max-width: 480px) {
     header img { width: 100px; }
     .hem-icon { width: 25px; }
+
+        .grid-right {
+        padding: 8px;
+        font-size: 0.85rem;         /* ännu mindre text */
+    }
+
+    .skill-bar {
+        max-width: 150px;           /* staplar ännu smalare */
+        height: 15px;               /* lägre höjd */
+    }
+
+    .skill-fill {
+        border-radius: 6px;         /* rundning proportionellt mindre */
+    }
+
+    .skill p {
+        font-size: 0.8rem;          /* texten ovanför stapeln blir mindre */
+    }
 }
