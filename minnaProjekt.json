@@ -14,7 +14,7 @@
     "anstalld": "minna"
   },
   {
-    "titel": "Tidbokningssystem",
+    "titel": "System för tidsbokning",
     "kund": "Klipp & Fint",
     "beskrivning": "System för kunder att boka tider online.",
     "merInfo": "PHP + MySQL backend, enkel frontend i Bootstrap.",

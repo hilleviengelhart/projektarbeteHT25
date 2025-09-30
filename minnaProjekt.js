@@ -35,9 +35,10 @@ const nextBtn = document.querySelector(".nästa");
 
 function showSlide(index) {
   slides.forEach((slide, i) => {
-    slide.style.display = i === index ? "block" : "none";
+    slide.classList.toggle('active', i === index);
   });
 }
+
 
 function nextSlide() {
   currentIndex = (currentIndex + 1) % slides.length;
@@ -69,3 +70,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//stänger menyn 
+document.querySelectorAll('#meny a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('menu-toggle').checked = false;
+  });
+})
