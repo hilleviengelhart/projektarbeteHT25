@@ -30,8 +30,15 @@ header img,
     height: auto;
 }
 
-header img { width: 130px; }
-.hem-icon { width: 30px; }
+header img 
+{ 
+  width: 130px; 
+}
+
+.hem-icon 
+{ 
+  width: 30px; 
+}
 
 #menuIcon {
     font-size: 2rem;
@@ -40,7 +47,9 @@ header img { width: 130px; }
     display: block;
 }
 
-#menu-toggle { display: none; }
+#menu-toggle {
+   display: none; 
+  }
 
 #meny {
     position: fixed;
@@ -57,17 +66,21 @@ header img { width: 130px; }
     z-index: 1000;
 }
 
-#meny li { margin-bottom: 1.5rem; }
+#meny li { 
+  margin-bottom: 1.5rem; 
+}
 
 #meny a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.2rem;
     display: block;
     padding: 0.5rem 0;
 }
 
-#menu-toggle:checked ~ #meny { transform: translateX(0); }
+#menu-toggle:checked ~ #meny { 
+  transform: translateX(0); 
+}
 
 /* =========================
    Rubriker
@@ -81,8 +94,12 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
 }
 
-h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); }
-h2, h3, h4 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
+h1 {
+   font-size: clamp(1.8rem, 5vw, 2.5rem); 
+  }
+h2, h3, h4 { 
+  font-size: clamp(1.4rem, 4vw, 1.8rem); 
+}
 
 /* =========================
    Grid-container
@@ -112,25 +129,27 @@ h2, h3, h4 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
 .grid-left-image img {
     width: auto;
     max-width: auto;
-    border-radius: 30px;
+    border-radius: 10px;
     margin: 0 auto;
 }
 
 .grid-right {
-    background-color: rgb(185, 228, 245);
+    background-color: #ffc05a;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
 }
 
 /* =========================
    Beskrivning
 ========================= */
 .grid-description { 
-    background: rgb(185, 228, 245);
-    padding: 30px 20px;
+    background-color: rgb(185, 228, 245);
+    padding: 20px 30px;
     border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
 }
 
 /* =========================
@@ -182,19 +201,36 @@ h2, h3, h4 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
     user-select: none;
 }
 
-.föregående { left: 40px; }
-.nästa { right: 40px; }
+.föregående {
+   left: 40px; 
+  }
+.nästa { 
+  right: 40px; 
+}
 
 .föregående:hover,
-.nästa:hover { background-color: #3072a4; }
+.nästa:hover { 
+  background-color: #3072a4; 
+}
 
 
 /* =========================
    Skill bars
 ========================= */
-.skill { margin-bottom: 20px; text-align: center; }
-.skill p { margin: 0 0 5px 0; }
-.skill-bar { width: 100%; max-width: 300px; margin: 0 auto 15px auto; background-color: #ddd; border-radius: 10px; height: 25px; }
+.skill { 
+  margin-bottom: 20px; text-align: center; 
+}
+.skill p { 
+  margin: 0 0 5px 0; 
+}
+.skill-bar { 
+  width: 100%; 
+  max-width: 300px; 
+  margin: 0 auto 15px auto; 
+  background-color: #ddd; 
+  border-radius: 10px; 
+  height: 25px; 
+}
 
 .skill-fill {
     height: 100%;
@@ -225,7 +261,7 @@ h2, h3, h4 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
 .projekt {
     width: 80%;
     max-width: 350px;
-    background: rgb(185, 228, 245);
+    background: #f5a623;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -272,7 +308,9 @@ h2, h3, h4 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
         margin-left: auto;
         transform: translateX(0);
     }
-    #meny li { margin: 0 1rem; }
+    #meny li { 
+      margin: 0 1rem; 
+    }
 }
 
 @media (max-width: 480px) {
