@@ -106,7 +106,6 @@ h2, h3, h4 {
    Grid-container
 ========================= */
 .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
@@ -128,7 +127,7 @@ h2, h3, h4 {
 }
 
 .grid-left-image img {
-    width: auto;
+    height: auto;
     max-width: 100%;
     border-radius: 0px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -228,8 +227,7 @@ h2, h3, h4 {
   margin: 0 0 5px 0; 
 }
 .skill-bar { 
-  width: 100%; 
-  max-width: 300px; 
+  max-width: 100%; 
   margin: 0 auto 15px auto; 
   background-color: #ddd; 
   border-radius: 10px; 
@@ -245,13 +243,14 @@ h2, h3, h4 {
 }
 
 /* =========================
-   Projektsektion
+   Projekt
 ========================= */
 .grid-projekt { 
     margin-bottom: 2rem;
 }
 
 .projekt-container {
+    align-items: start;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -270,7 +269,7 @@ h2, h3, h4 {
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
-    /* Animation */
+
     opacity: 0;
     transform: translateY(60px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out, box-shadow 1.5s ease;
@@ -293,22 +292,27 @@ h2, h3, h4 {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: flex-start; /* start istället för center för bättre balans */
+        align-items: flex-start; 
         gap: 15px;
     }
     .grid-left-image {
-        flex: 0 0 170px; /* bildens “låda” blir 120px bred */
+        flex: 0 0 170px; 
         text-align: center;
     }
     .grid-left-image img {
-        width: 100%; /* fyller sin box */
+        width: 100%; 
         height: auto;
         border-radius: 10px;
     }
+    .grid-left-image h1 {
+    font-size: 1.4rem;  
+    margin-bottom: 0.5rem;
+  }
+
 
   .grid-right {
-        flex: 1; /* tar resten av raden */
-        max-width: 160px; /* begränsar bredden så det inte blir jättestort */
+        flex: 1; 
+        max-width: 160px; 
         padding: 8px;
         font-size: 0.8rem;
         box-sizing: border-box;
@@ -344,19 +348,19 @@ h2, h3, h4 {
 
         .grid-right {
         padding: 8px;
-        font-size: 0.85rem;         /* ännu mindre text */
+        font-size: 0.85rem;        
     }
 
     .skill-bar {
-        max-width: 150px;           /* staplar ännu smalare */
-        height: 15px;               /* lägre höjd */
+        max-width: 150px;           
+        height: 15px;              
     }
 
     .skill-fill {
-        border-radius: 6px;         /* rundning proportionellt mindre */
+        border-radius: 6px;         
     }
 
     .skill p {
-        font-size: 0.8rem;          /* texten ovanför stapeln blir mindre */
+        font-size: 0.8rem;          
     }
 }

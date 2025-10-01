@@ -5,99 +5,100 @@ document.addEventListener('DOMContentLoaded', () => {
     const projektLista = document.getElementById("projekt-lista");
 
     axios.get("./minnaProjekt.json")
-        .then(response => {
-            const data = response.data;
+        .then(svar => {
+            const data = svar.data;
 
             data.forEach(projekt => {
-                const div = document.createElement("div");
-                div.classList.add("projekt");
+                const projektDiv = document.createElement("div");
+                projektDiv.classList.add("projekt");
 
-                div.innerHTML = `
+                projektDiv.innerHTML = `
                     <h3>${projekt.titel}</h3>
                     <p><strong>Kund:</strong> ${projekt.kund}</p>
                     <p>${projekt.beskrivning}</p>
                     ${projekt.merInfo ? `<details><summary>Mer info</summary><p>${projekt.merInfo}</p></details>` : ""}
                 `;
 
-                projektLista.appendChild(div);
+                projektLista.appendChild(projektDiv);
             });
 
             // Scroll-animation för projekten
-            const projektElements = document.querySelectorAll('.projekt');
+            const projektElementen = document.querySelectorAll('.projekt');
 
-            function isInViewport(el) {
-                const rect = el.getBoundingClientRect();
+            function ärSynligIViewport(element) {
+                const rect = element.getBoundingClientRect();
                 return rect.top < window.innerHeight && rect.bottom > 0;
             }
 
-            function handleScrollProjects() {
-                projektElements.forEach((el, index) => {
-                    if (isInViewport(el) && !el.classList.contains('visible')) {
+            function hanteraScrollProjekt() {
+                projektElementen.forEach((element, index) => {
+                    if (ärSynligIViewport(element) && !element.classList.contains('visible')) {
                         setTimeout(() => {
-                            el.classList.add('visible');
+                            element.classList.add('visible');
                         }, index * 200);
                     }
                 });
             }
 
-            handleScrollProjects();
-            window.addEventListener('scroll', handleScrollProjects);
+            hanteraScrollProjekt();
+            window.addEventListener('scroll', hanteraScrollProjekt);
 
         })
-        .catch(error => {
-            console.error("Fel vid inläsning av projekt:", error);
+        .catch(fel => {
+            console.error("Fel vid inläsning av projekt:", fel);
             projektLista.innerHTML = "<p>Kunde inte ladda projekt.</p>";
         });
 
-    // ==========================
-    // Fyller skillbar
-    // ==========================
-    const skillFills = document.querySelectorAll('.skill-fill');
+// ==========================
+// Fyller skillbar
+// ==========================
+const färgFyllningar = document.querySelectorAll('.skill-fill');
 
-    skillFills.forEach(fill => {
-        const percentage = fill.getAttribute('data-percentage');
-        fill.style.width = percentage;
-    });
+färgFyllningar.forEach(fyll => {
+    const procent = fyll.getAttribute('data-percentage');
+    fyll.style.width = procent;
+});
 
-    // ==========================
-    // Stänger menyn när länk klickas
-    // ==========================
-    document.querySelectorAll('#meny a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('menu-toggle').checked = false;
-        });
+// ==========================
+// Stänger menyn när länk klickas
+// ==========================
+document.querySelectorAll('#meny a').forEach(länk => {
+    länk.addEventListener('click', () => {
+        document.getElementById('menu-toggle').checked = false;
     });
+});
+
 });
 
 // ==========================
 // Bildspel
 // ==========================
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const prevBtn = document.querySelector(".föregående");
-const nextBtn = document.querySelector(".nästa");
+let nuvarandeIndex = 0;
+const bilder = document.querySelectorAll(".slide");
+const knappFöregående = document.querySelector(".föregående");
+const knappNästa = document.querySelector(".nästa");
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
+function visaBild(index) {
+    bilder.forEach((bild, i) => {
+        bild.classList.toggle('active', i === index);
     });
 }
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
+function nästaBild() {
+    nuvarandeIndex = (nuvarandeIndex + 1) % bilder.length;
+    visaBild(nuvarandeIndex);
 }
 
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(currentIndex);
+function föregåendeBild() {
+    nuvarandeIndex = (nuvarandeIndex - 1 + bilder.length) % bilder.length;
+    visaBild(nuvarandeIndex);
 }
+
+// Visa första bilden vid start
+visaBild(nuvarandeIndex);
 
 // Event listeners för knapparna
-if (nextBtn && prevBtn) {
-    nextBtn.addEventListener("click", nextSlide);
-    prevBtn.addEventListener("click", prevSlide);
+if (knappNästa && knappFöregående) {
+    knappNästa.addEventListener("click", nästaBild);
+    knappFöregående.addEventListener("click", föregåendeBild);
 }
-
-// Visa första bilden
-showSlide(currentIndex);
