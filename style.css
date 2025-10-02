@@ -17,8 +17,9 @@ header {
     padding: 1em 1.5em;
 }
 
-header img, header .logga {
-    width: 120px;
+header img,
+header .logga {
+    width: 130px;
     height: auto;
 }
 
@@ -31,7 +32,7 @@ header img, header .logga {
 }
 
 #menu-toggle {
-    display: none; 
+    display: none;
 }
 
 #meny {
@@ -53,43 +54,54 @@ header img, header .logga {
 }
 
 #meny a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1.2rem;
     display: block;
     padding: 0.5rem 0;
 }
 
-#menu-toggle:checked ~ #meny {
+#menu-toggle:checked~#meny {
     left: 0;
 }
 
 /* --- Rubriker --- */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 700;
     text-transform: uppercase;
-    color: #2785d0;
+    color: #2c6fa3;
     text-align: center;
     margin: 2rem 0 1rem 0;
 }
 
-h1 { font-size: 2.2rem; } /* mindre på mobiler */
-h2, h3, h4 { font-size: 1.6rem; }
+h1 {
+    font-size: 2.2rem;
+}
+
+/* mindre på mobiler */
+h2,
+h3,
+h4 {
+    font-size: 1.6rem;
+}
 
 /* --- Paragrafer --- */
 p {
     font-size: 1rem;
     margin: 1rem 0;
     padding: 0 1rem;
-    text-align: justify;
+    text-align: center;
 }
 
 /* --- Anställda sektion --- */
 .anställd {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    text-align: center;     
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin: 1rem;
     background-color: rgb(185, 228, 245);
     padding: 1rem;
@@ -97,11 +109,12 @@ p {
 }
 
 .anställd img {
-    width: 50%;
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%;
+    width: 220px;
+    max-width: 220px;
+    height: 220px;
+    border-radius: 15%;
     transition: all 0.3s ease-in-out;
+    object-fit: cover;
 }
 
 .anställd img:hover {
@@ -109,50 +122,51 @@ p {
 }
 
 .anställd p:nth-of-type(1) {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 /* --- Grid för anställda --- */
 .BilderAnställda {
     display: grid;
-    grid-template-columns: 1fr; /* en kolumn på mobiler */
+    grid-template-columns: 1fr;
+    /* en kolumn på mobiler */
     gap: 1.5rem;
     padding: 1rem;
 }
 
 /* --- Läs mer knapp --- */
 .läs-mer {
-    display: inline-block;            
+    display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #2c6fa3;       
-    color: black;
+    background-color: #2c6fa3;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    border-radius: 4px;              
+    border-radius: 4px;
     font-weight: 600;
     transition: background 0.3s, transform 0.2s;
 }
 
 .läs-mer:hover {
-    background-color: #1f4e73;       
-    transform: scale(1.05);          
+    background-color: #2c6fa3;
+    transform: scale(1.05);
 }
 
 /* --- Mobilanpassning med media queries --- */
 @media (min-width: 768px) {
-#menuIcon {
-        display: none; 
-}
+    #menuIcon {
+        display: none;
+    }
 
-#meny {
+    #meny {
         position: static;
         display: flex;
         flex-direction: row;
-        background: #2785d0;
+        background: #2c6fa3;
         height: auto;
         width: auto;
         padding: 0;
-        margin-left: auto; 
+        margin-left: auto;
         transition: none;
     }
 
@@ -160,11 +174,19 @@ p {
         margin: 0 1rem;
     }
 
-    h1 { font-size: 3rem; }
-    h2, h3, h4 { font-size: 2rem; }
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2,
+    h3,
+    h4 {
+        font-size: 2rem;
+    }
 
     .BilderAnställda {
-        grid-template-columns: repeat(2, 1fr); /* två kolumner på större skärm */
+        grid-template-columns: repeat(2, 1fr);
+        /* två kolumner på större skärm */
         padding: 2rem;
     }
 
@@ -179,8 +201,48 @@ p {
     }
 }
 
-.form{
-    display:flex;
+#kontaktformulär {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto", sans-serif;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
 }
+
+#kontaktformulär label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #2c6fa3;
+}
+
+#kontaktformulär input,
+#kontaktformulär textarea {
+    padding: 0.7rem 1rem;
+    border: 1.1px solid #2c6fa3;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#kontaktformulär button {
+    padding: 1rem 0.3rem;
+    background-color: #2c6fa3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#kontaktformulär button:hover {
+    background-color: #1f4f73;
+    transform: scale(1.05);
+}
+
