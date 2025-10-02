@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Minna Seger - Nexa Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="minna.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <input type="checkbox" id="menu-toggle" aria-label="Meny toggle">
+    <label for="menu-toggle" id="menuIcon">&#9776;</label>
+    <img src="logga.png" alt="Bild på vår logga">
+    <ul id="meny">
+      <li><a href="#kompetenser">Mina kompetenser</a></li>
+      <li><a href="#omMig">Om mig</a></li>
+      <li><a href="#minaBilder">Bilder</a></li>
+      <li><a href="#minaProjekt">Projekt</a></li>
+      <li><a href="huvudsida.html"><img src="minnaHem.png" alt="hem" class="hem-icon"></a></li>
+    </ul>
+  </header>
+
+  <!-- Huvudcontainer -->
+  <div class="grid-container">
+
+    <!-- Bild + Kompetenser -->
+    <div class="grid-middle">
+      <div class="grid-left-image">
+        <h1>Minna Seger</h1>
+        <img src="Anställd1.png" alt="Bild på Minna Seger" id="minnaHuvudbild">
+      </div>
+      <div class="grid-right" id="kompetenser">
+        <h2>Mina kompetenser</h2>
+        <div class="skill">
+          <p>HTML</p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-percentage="90%">90%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <p>CSS</p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-percentage="80%">80%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <p>JavaScript</p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-percentage="70%">70%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Om mig -->
+    <div class="grid-description" id="omMig"> 
+      <p><strong>Roll: Back-endutvecklare</strong></p>
+      <p>Jag har arbetat som back-endutvecklare i drygt tre år, där jag ansvarar för att bygga och underhålla de system som körs bakom kulisserna. Mitt fokus ligger på servrar, databaser och den logik som får våra applikationer att fungera stabilt och effektivt.</p>
+      <p>Det som driver mig i arbetet är möjligheten att lösa komplexa problem och skapa strukturer som andra kan bygga vidare på. Jag brinner för att optimera prestanda, säkra dataflöden och hitta smarta lösningar som både utvecklare och slutanvändare får nytta av.</p>
+    </div>
+
+    <!-- Bildspel -->
+    <div class="grid-bildspel" id="minaBilder">
+      <h3>Bildspel</h3>
+      <div class="bildspel">
+        <img class="slide active" src="minnaBild1.png" alt="En bild när Minna arbetar">
+        <img class="slide" src="minnaBild3.png" alt="En bild när Minna håller i föreläsning">
+        <img class="slide" src="minnaBild4.png" alt="En bild när Minna skakar hand med kund">
+        <button class="föregående">&#10094;</button>
+        <button class="nästa">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Projekt -->
+    <div class="grid-projekt" id="minaProjekt">
+      <h4>Mina projekt</h4>
+      <div id="projekt-lista" class="projekt-container"></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="minnaProjekt.js"></script>
+</body>
+</html>

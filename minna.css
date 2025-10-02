@@ -1,0 +1,366 @@
+/* =========================
+   Grundläggande stil
+========================= */
+body {
+    font-family: 'Lora', serif;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #3c80b7, #e6eff8);
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   Header
+========================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c6fa3;
+    padding: 1em 1.5em;
+
+    top: 0;
+    z-index: 10000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header img,
+.hem-icon {
+    height: auto;
+}
+
+header img 
+{ 
+  width: 130px; 
+}
+
+.hem-icon 
+{ 
+  width: 30px; 
+}
+
+#menuIcon {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+#menu-toggle {
+   display: none; 
+  }
+
+#meny {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    height: 100%;
+    width: auto;
+    background-color: #2c6fa3;
+    list-style-type: none;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+#meny li { 
+  margin-bottom: 1.5rem; 
+}
+
+#meny a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+#menu-toggle:checked ~ #meny { 
+  transform: translateX(0); 
+}
+
+/* =========================
+   Rubriker
+========================= */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    text-transform: capitalize;
+    color: #042b48;
+    text-align: center;
+    margin: 1rem 0 1.5rem 0;
+    letter-spacing: 1px;
+}
+
+h1 {
+   font-size: clamp(1.8rem, 5vw, 2.5rem); 
+  }
+h2, h3, h4 { 
+  font-size: clamp(1.4rem, 4vw, 1.8rem); 
+}
+
+/* =========================
+   Grid-container
+========================= */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* =========================
+   Bild + Kompetenser
+========================= */
+.grid-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.grid-left-image {
+  text-align: center;
+}
+
+.grid-left-image img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0 auto;
+}
+
+.grid-right {
+    background-color: #bbd9f8;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 60%;
+
+}
+
+/* =========================
+   Beskrivning
+========================= */
+.grid-description { 
+    background-color: #b0d1f3;
+    padding: 20px 30px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+}
+
+/* =========================
+   Bildspel
+========================= */
+.grid-bildspel { 
+    display: grid; 
+    place-items: center;
+}
+
+.bildspel {
+    position: relative;
+    max-width: 1000px;
+    width:100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #5984a5;
+    border-radius: 10px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+
+/* Bildspels-pilar */
+.föregående, .nästa {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #5984a5;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    user-select: none;
+}
+
+.föregående {
+   left: 40px; 
+  }
+.nästa { 
+  right: 40px; 
+}
+
+.föregående:hover,
+.nästa:hover { 
+  background-color: #3072a4; 
+}
+
+
+
+/* =========================
+   Skill bars
+========================= */
+.skill { 
+  margin-bottom: 20px; text-align: center; 
+}
+.skill p { 
+  margin: 0 0 5px 0; 
+}
+.skill-bar { 
+  max-width: 100%; 
+  margin: 0 auto 15px auto; 
+  background-color: #ddd; 
+  border-radius: 10px; 
+  height: 25px; 
+}
+
+.skill-fill {
+    height: 100%;
+    width: 0;
+    background-color: #f9bf61;
+    border-radius: 10px;
+    transition: width 5s ease-in-out;
+}
+
+/* =========================
+   Projekt
+========================= */
+.grid-projekt { 
+    margin-bottom: 2rem;
+}
+
+.projekt-container {
+    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.projekt {
+    width: 80%;
+    max-width: 350px;
+    background: #f9bf61;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out, box-shadow 1.5s ease;
+}
+
+.projekt.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   Responsiv design
+========================= */
+@media (max-width: 767px) {
+    #menuIcon { display: block; }
+    #meny { transform: translateX(-100%); }
+
+    .grid-middle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start; 
+        gap: 15px;
+    }
+    .grid-left-image {
+        flex: 0 0 170px; 
+        text-align: center;
+    }
+    .grid-left-image img {
+        width: 100%; 
+        height: auto;
+        border-radius: 10px;
+    }
+    .grid-left-image h1 {
+    font-size: 1.4rem;  
+    margin-bottom: 0.5rem;
+  }
+
+
+  .grid-right {
+        flex: 1; 
+        max-width: 160px; 
+        padding: 8px;
+        font-size: 0.8rem;
+        box-sizing: border-box;
+    }
+
+  .skill-bar{
+    max-width: 120px;
+    height: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+    #menuIcon { display: none; }
+    #meny {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: #2c6fa3;
+        height: auto;
+        width: auto;
+        padding: 0;
+        margin-left: auto;
+        transform: translateX(0);
+    }
+    #meny li { 
+      margin: 0 1rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    header img { width: 100px; }
+    .hem-icon { width: 25px; }
+
+        .grid-right {
+        padding: 8px;
+        font-size: 0.85rem;        
+    }
+
+    .skill-bar {
+        max-width: 150px;           
+        height: 15px;              
+    }
+
+    .skill-fill {
+        border-radius: 6px;         
+    }
+
+    .skill p {
+        font-size: 0.8rem;          
+    }
+}
