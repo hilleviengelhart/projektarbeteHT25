@@ -1,0 +1,45 @@
+[
+    {
+        "id": "todo-app",
+        "titel": "Interaktiv To-Do-App",
+        "kund": "Personligt Projekt (Portfolio)",
+        "kort_beskrivning": "En fullt fungerande att-göra-lista där användaren kan spara uppgifter i Local Storage.",
+        "mer_information": "Fokus låg på Vanilla JavaScript för att hantera användarinteraktion och DOM-manipulation utan externa ramverk. Visar förmåga att bygga komponenter från grunden."
+
+    },
+    {
+        "id": "vader-widget",
+        "titel": "Väder-widget med API-integration",
+        "kund": "Fiktivt Startup: 'Väderkoll AB'",
+        "kort_beskrivning": "Dynamisk väderapplikation som hämtar och presenterar aktuell data från ett publikt API baserat på stadssökning.",
+        "mer_information": "Projektet demonstrerar asynkron programmering (Axios/Fetch) och felhantering. Designen är responsiv och anpassar sig efter väderikonerna."
+    },
+    {
+        "id": "kampanj",
+        "titel": "Responsiv Kampanjsida",
+        "kund": "Lokal Förening: 'Naturvännerna'",
+        "kort_beskrivning": "En stilren, en-sidig landningssida för en insamlingskampanj, optimerad för mobil först.",
+        "mer_information": "Huvudfokus var på responsiv design och tillgänglighet (WCAG) med användning av semantisk HTML och moderna CSS-tekniker som Flexbox och Grid."
+    },
+    {
+        "id":"ehandel",
+        "titel": "Varukorgslogik för E-handel",
+        "kund": "Personligt Projekt (E-handelssimulering)",
+        "kort_beskrivning": "Front-end-simulering av en varukorgsfunktionalitet inklusive kvantitetsjustering och totalsumma.",
+        "mer_information": "Logiken hanteras enbart med JavaScript genom användning av Array-metoder och tillståndshantering (state) utan extern databas. Visar förmåga att hantera affärslogik i gränssnittet."
+    },
+    {
+        "id":"quiz",
+        "titel": "Interaktivt Frågesport-Quiz",
+        "kund": "Utbildningsplattform: 'Kunskapsnavet'",
+        "kort_beskrivning": "En quiz-applikation som laddar frågor från ett JavaScript-objekt och räknar slutpoängen dynamiskt.",
+        "mer_information": "Demonstrerar hantering av användarinmatning, feedback-mekanismer och hur man presenterar data (frågor/svar) hämtat från en intern datastruktur."
+    },
+    {
+        "id": "filtrering",
+        "titel": "Interaktiv Produktfiltrering",
+        "kund": "Fiktivt E-handelslager",
+        "kort_beskrivning": "En sida som dynamiskt filtrerar och sorterar en lista med produkter baserat på pris, kategori och betyg.",
+        "mer_information": "Projektet visar hantering av komplex data (Arrayer av objekt) i JavaScript. Fokus ligger på att uppdatera DOM effektivt när användaren interagerar med olika filter. Visar kompetens i händelsehantering och array-metoder (filter, sort, map)."
+    }
+]
