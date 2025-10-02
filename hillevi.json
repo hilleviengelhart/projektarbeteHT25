@@ -1,0 +1,26 @@
+[
+    {"namn": "Ny design för ICAs onlinehandling - ICA", 
+    "Kund": "ICA",
+    "Beskrivning": "Under detta projekt tog jag tillsammans med ICAs designteam fram en ny design för deras onlinetjänst där kunder kan handla mat direkt hem till dörren. Under detta projekt såg jag till att designen blev så lättläst som möjlig för användaren"
+},
+    {"namn": "Rebranding av blocket - Blocket",
+    "Kund": "Blocket", 
+    "Beskrivning": "Här gjorde vi om hela blockets hemsida vid deras rebranding. Hela layouten gjordes och med nytt fokus på appen." 
+},
+    {"namn":"Digitala utbildningsplattformar - EduTech AB",
+    "Kund": "EduTech AB",
+    "Beskrivning": "Jag ledde användarcentrerade designprocesser för att skapa en intuitiv plattform för onlineutbildning, vilket förbättrade användarupplevelsen och ökad tillgänglighet för studenter."
+},
+{
+    "namn": "Mobilapp för hälsofeedback - HealthTrack",
+    "Kund": "HealthTrack",
+    "Beskrivning": "Under detta projekt analyserade jag användarnas behov för att designa en mobilapplikation som hjälper användare att logga och följa sina hälsomått på ett enkelt och inspirerande sätt."
+},
+{
+    "namn": "E-handel för kläder - FashionOnline",
+    "Kund": "FashionOnline",
+    "Beskrivning": "Jag förbättrade användarresan och designade ett mer lättnavigerat e-handelssystem som ökade konverteringsgraden samt gjorde det enklare för kunder att hitta och köpa kläder."
+}
+
+
+]

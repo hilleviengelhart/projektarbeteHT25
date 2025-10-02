@@ -1,0 +1,195 @@
+/* */
+body {
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #c6e8f1;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2c6fa3;
+    padding: 1em 1.5em;
+    position: relative;
+}
+
+header img, header .logga {
+    width: 130px;
+    height: auto;
+}
+
+#menuIcon {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+#menu-toggle {
+    display: none; 
+}
+
+#menuIcon {
+    display: none; 
+}
+
+#meny {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    display: flex;
+    flex-direction: row;
+    background: #2785d0;
+    height: auto;
+    width: auto;
+    padding: 0;
+    margin-left: auto; 
+    transition: none;
+}
+
+#meny li {
+    margin-bottom: 1.5rem;
+}
+
+meny a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 0;
+    /* transition: background 0.3s; */
+}
+
+
+
+.circular-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.bildspel {
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .bildspel img {
+    width: 100%;
+    height: auto;
+    display: none; /* initiate hidden, JavaScript visar rätt bild */
+  }
+  
+  #knapp-bak, #knapp-fram {
+    background-color: #2c6fa3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #knapp-bak:hover, #knapp-fram:hover {
+    background-color: #1f4e73;
+  }
+
+  h1 {
+    font-size: 3rem; /* gör rubriken större */
+  }
+  
+  h2 {
+    font-size: 2rem; /* lite mindre än h1 */
+  }
+  
+  h3 {
+    font-size: 1.6rem; /* mindre rubrik */
+  }
+
+  /* Ursprungligen: göm datormeny (de visas endast på stora skärmar) */
+.dator-meny {
+    display: none; 
+  }
+  
+  /* Mobilmeny syns alltid som default */
+  .mobil-meny {
+    display: block; 
+    position: relative;
+  }
+  
+  /* Menyikon för mobil */
+  .menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: block;
+    padding: 0.5rem;
+    background-color: #2c6fa3;
+    color: white;
+    max-width: fit-content;
+  }
+  
+  /* Lista i mobilmenyn (göms initialt, visas vid klick) */
+  .mobil-meny ul {
+    display: none;
+    list-style: none;
+    background-color: #2c6fa3;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  /* Visa när checkbox är checkad */
+  #mobil-meny-toggle:checked + .menu-icon + ul {
+    display: block;
+  }
+  
+  /* Styling för länkar i båda menyerna */
+  .dator-meny ul li a,
+  .mobil-meny ul li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Större skärmar — visa datormeny och dölja mobilmeny */
+  @media (min-width: 768px) {
+    /* Visa datormeny */
+    .dator-meny {
+      display: block;
+    }
+    /* Dölja mobilmeny */
+    .mobil-meny {
+      display: none;
+    }
+    /* Styla datormeny till horisontell liknande huvudmenyn */
+    .dator-meny ul {
+      display: flex;
+      gap: 1rem;
+    }
+    .dator-meny ul li {
+      display: inline;
+    }
+    .dator-meny ul li a {
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  
+
+
