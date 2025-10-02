@@ -1,6 +1,6 @@
-/* =========================
+/* 
    Grundläggande stil
-========================= */
+*/
 body {
     font-family: 'Lora', serif;
     color: #333;
@@ -10,9 +10,9 @@ body {
     padding: 0;
 }
 
-/* =========================
+/*
    Header
-========================= */
+ */
 header {
     display: flex;
     align-items: center;
@@ -82,9 +82,9 @@ header img
   transform: translateX(0); 
 }
 
-/* =========================
+/* 
    Rubriker
-========================= */
+*/
 h1, h2, h3, h4 {
     font-weight: 700;
     font-family: "Roboto", sans-serif;
@@ -102,9 +102,9 @@ h2, h3, h4 {
   font-size: clamp(1.4rem, 4vw, 1.8rem); 
 }
 
-/* =========================
+/* 
    Grid-container
-========================= */
+ */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -112,9 +112,9 @@ h2, h3, h4 {
     padding: 20px;
 }
 
-/* =========================
+/*
    Bild + Kompetenser
-========================= */
+ */
 .grid-middle {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -143,9 +143,9 @@ h2, h3, h4 {
 
 }
 
-/* =========================
+/* 
    Beskrivning
-========================= */
+ */
 .grid-description { 
     background-color: #b0d1f3;
     padding: 20px 30px;
@@ -154,9 +154,9 @@ h2, h3, h4 {
 
 }
 
-/* =========================
+/* 
    Bildspel
-========================= */
+*/
 .grid-bildspel { 
     display: grid; 
     place-items: center;
@@ -188,7 +188,9 @@ h2, h3, h4 {
 }
 
 
-/* Bildspels-pilar */
+/* 
+Bildspels-pilar 
+*/
 .föregående, .nästa {
     position: absolute;
     top: 50%;
@@ -217,9 +219,9 @@ h2, h3, h4 {
 
 
 
-/* =========================
+/* 
    Skill bars
-========================= */
+*/
 .skill { 
   margin-bottom: 20px; text-align: center; 
 }
@@ -242,9 +244,9 @@ h2, h3, h4 {
     transition: width 5s ease-in-out;
 }
 
-/* =========================
+/* 
    Projekt
-========================= */
+*/
 .grid-projekt { 
     margin-bottom: 2rem;
 }
@@ -281,9 +283,9 @@ h2, h3, h4 {
 }
 
 
-/* =========================
+/*
    Responsiv design
-========================= */
+*/
 @media (max-width: 767px) {
     #menuIcon { display: block; }
     #meny { transform: translateX(-100%); }

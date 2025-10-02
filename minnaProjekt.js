@@ -1,6 +1,5 @@
-// ==========================
+
 // Hämta projekt från JSON och visa dem
-// ==========================
 document.addEventListener('DOMContentLoaded', () => {
     const projektLista = document.getElementById("projekt-lista");
 
@@ -49,9 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
             projektLista.innerHTML = "<p>Kunde inte ladda projekt.</p>";
         });
 
-// ==========================
+
 // Fyller skillbar
-// ==========================
 const färgFyllningar = document.querySelectorAll('.skill-fill');
 
 färgFyllningar.forEach(fyll => {
@@ -59,9 +57,8 @@ färgFyllningar.forEach(fyll => {
     fyll.style.width = procent;
 });
 
-// ==========================
+
 // Stänger menyn när länk klickas
-// ==========================
 document.querySelectorAll('#meny a').forEach(länk => {
     länk.addEventListener('click', () => {
         document.getElementById('menu-toggle').checked = false;
@@ -70,9 +67,8 @@ document.querySelectorAll('#meny a').forEach(länk => {
 
 });
 
-// ==========================
+
 // Bildspel
-// ==========================
 let nuvarandeIndex = 0;
 const bilder = document.querySelectorAll(".slide");
 const knappFöregående = document.querySelector(".föregående");
