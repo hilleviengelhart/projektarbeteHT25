@@ -33,9 +33,9 @@ if (btnFramåt && btnBakåt) {
 // Visa första bilden vid laddning
 visaBild(aktuellBildIndex);
 
-// =====================
+
 // Hämtar och visar projekten med Axios
-// =====================
+
 
 // Kontrollera att axios är inkluderat i HTML i <head> eller precis innan slutet av <body>
 if (typeof axios !== 'undefined') {

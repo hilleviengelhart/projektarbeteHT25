@@ -5,45 +5,25 @@
 <title>Nexa Systems - Henrik Engelhart</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Stil & script -->
 <link rel="stylesheet" href="hillevi.css" />
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="hillevi.js" defer></script>
 </head>
 <body>
 
-<!-- Menyer: Mobil och Desktop -->
-<!-- Datormeny (syns på stora skärmar) -->
-<nav class="dator-meny">
-  <ul>
-    <li><a href="#anställda">Anställda</a></li>
-    <li><a href="#omOss">Om oss</a></li>
-    <li><a href="#kontaktaOss">Kontakta oss</a></li>
-    <li><a href="huvudsida.html">Hem</a></li>
-  </ul>
-</nav>
 
-<!-- Mobilmeny (syns på små skärmar) -->
-<div class="mobil-meny">
-  <input type="checkbox" id="mobil-meny-toggle" />
-  <label for="mobil-meny-toggle" class="menu-icon">&#9776;</label>
-  <ul>
-    <li><a href="#anställda">Anställda</a></li>
-    <li><a href="#omOss">Om oss</a></li>
-    <li><a href="#kontaktaOss">Kontakta oss</a></li>
-    <li><a href="huvudsida.html">Hem</a></li>
-  </ul>
-</div>
 
-<!-- Header (tdatmeny, kan tas bort om du vill använda bara en av dem) -->
+
+<!-- Header  -->
 <header>
   <input type="checkbox" id="menu-toggle" />
   <label for="menu-toggle" id="menuIcon">&#9776;</label>
   <img src="logga.png" alt="Vår logga" />
   <ul id="meny">
-    <li><a href="#anställda">Anställda</a></li>
-    <li><a href="#omOss">Om oss</a></li>
-    <li><a href="#kontaktaOss">Kontakta oss</a></li>
+    <li><a href="#omMig">Om Mig</a></li>
+    <li><a href="#bilder">bilder</a></li>
+    <li><a href="#projekt">Projekt</a></li>
+    <li><a href="huvudsida.html">Hem</a></li>
   </ul>
 </header>
 
@@ -59,7 +39,7 @@
 
 <h2>Bilder från jobbet</h2>
 <div class="bildspel">
-  <!-- Bilder för ditt bildspel -->
+  <!-- Bilder -->
   <img src="hilleviBild.png" class="bild" style="display: none;">
   <img src="hilleviBild2.png" class="bild" style="display: none;">
   <img src="hilleviBild4.png" class="bild" style="display: none;">
@@ -72,7 +52,7 @@
 <h3>Mina projekt</h3>
 <div id="projektLista"></div>
 
-<script src="hillevi.js"></script>
+
 
 </body>
 </html>
