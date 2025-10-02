@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nexa systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="harun.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="harun.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" id="menuIcon">&#9776;</label>
+    <img src="logga.png" alt="Bild på vår logga">
+    <ul id="meny">
+      <li> <a href="#anställda"> Anställda</a></li>
+      <li> <a href="#omOss">Om oss</a></li>
+      <li> <a href="#kontaktaOss">Kontakta oss</a></li>
+    </ul>
+  </header>
+
+  <div class="grid-container">
+
+    <div class="grid-item item1">
+      <h1>Nexa systems</h1>
+    </div>
+
+    <div class="grid-item item2">
+      <h2 id="omOss">Harun Atic</h2>
+    </div>
+
+    <div class="harunanställd">
+      <img src="Anställd4.png" alt="bild på en av de anställda på Nexa systems" class="profil-harun">
+      <section class="kompetenser-section" id="kompetenser">
+        <h2>Mina Kompetenser</h2>
+        <div class="skill">
+          <div class="skill-name">
+            <span>Systemarkitektur</span>
+            <span>90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--skill-width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">
+            <span>Cloud Computing (Azure, AWS)</span>
+            <span>85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--skill-width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">
+            <span>Databaser (SQL, NoSQL)</span>
+            <span>80%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--skill-width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">
+            <span>Microservices & API Design</span>
+            <span>88%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--skill-width: 88%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">
+            <span>DevOps & CI/CD</span>
+            <span>75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" style="--skill-width: 75%"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="presentation">
+      <p>Harun Atic - IT-arkitekt på Nexa Systems</p>
+      <p>Harun Atic arbetar som IT-arkitekt på Nexa Systems och ansvarar för att planera och utforma företagets tekniska
+        struktur.</p>
+      <p>I sin roll säkerställer han att systemens olika delar integreras smidigt och fungerar som en helhet, både på
+        kort
+        och lång sikt.</p>
+      <p>Harun har ett analytiskt förhållningssätt och kombinerar teknisk kompetens med strategiskt tänkande för att
+        skapa
+        lösningar som är både effektiva och hållbara.</p>
+      <p>Utöver att designa arkitekturen fungerar han ofta som en länk mellan utvecklingsteam, drift och verksamhetens
+        ledning, där han översätter tekniska krav till affärsmässiga möjligheter.</p>
+      <p>Hans arbete bidrar till att Nexa Systems kan erbjuda stabila, flexibla och framtidssäkra IT-lösningar till sina
+        kunder.</p>
+      </div> 
+
+        <script src="validering.js"></script>
+
+        <div class="slideshow">
+          <button id="prev-btn">&#10094;</button>
+          <img id="slide-img" src="harunBild1.png" alt="Bildspel">
+          <button id="next-btn">&#10095;</button>
+        </div>
+
+        <h2>Mina projekt</h2>
+        <div class="filter-sort-container">
+          <input type="text" id="filter-input" placeholder="Filtrera projekt...">
+          <select id="sort-select">
+            <option value="">Sortera projektlista</option>
+            <option value="titel">Sortera på bokstavsordning</option>
+            <option value="kund">Sortera på kund</option>
+          </select>
+        </div>
+
+        <div id="projekt-lista"></div>
+
+        </div>
+
+</body>
+
+</html>

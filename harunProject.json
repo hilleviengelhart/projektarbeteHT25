@@ -1,0 +1,32 @@
+[
+  {
+    "titel": "Intranät för kommun",
+    "kund": "Örebro kommun",
+    "beskrivning": "Utvecklade ett internt system för dokumenthantering och kommunikation.",
+    "merInfo": "Projektet använde React och Node.js med fokus på säkerhet. Systemet inkluderade versionshantering för dokument och realtidschatt mellan anställda. Extra vikt lades på dataskydd och autentisering för att uppfylla kommunens säkerhetskrav."
+  },
+  {
+    "titel": "E-handelssida",
+    "kund": "Webbshopen AB",
+    "beskrivning": "Byggde en responsiv e-handelsplattform med betalningslösning.",
+    "merInfo": "Integrerade Klarna Checkout. Plattformen utvecklades i en mobilanpassad design för att ge en smidig köpupplevelse. Dessutom implementerades ett administrationsgränssnitt för att hantera produkter och ordrar."
+  },
+  {
+    "titel": "CRM-system",
+    "kund": "Företag X",
+    "beskrivning": "Utvecklade ett CRM-system för kundhantering och försäljningsstöd.",
+    "merInfo": "Byggt i C# och SQL Server. Systemet inkluderade funktioner för lead-hantering och automatiserade rapporter. Säkerhetsnivån förstärktes genom rollbaserad åtkomstkontroll."
+  },
+  {
+    "titel": "Mobilapp för bokning",
+    "kund": "Gym24",
+    "beskrivning": "Designade och utvecklade en app för bokning av träningspass.",
+    "merInfo": "Appen byggdes i Flutter. Den integrerades med ett backend-API för att hantera bokningar och betalningar. Pushnotiser implementerades för att påminna användarna om kommande träningspass."
+  },
+  {
+    "titel": "Webbportal för utbildning",
+    "kund": "Universitetet",
+    "beskrivning": "Byggde en digital plattform för kursmaterial och scheman.",
+    "merInfo": "Använde Laravel och MySQL. Plattformen inkluderade autentisering och rollbaserad åtkomst för studenter och lärare. Systemet optimerades för att hantera många samtidiga användare utan prestandaförlust."
+  }
+]
