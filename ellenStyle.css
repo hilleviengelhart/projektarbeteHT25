@@ -185,7 +185,6 @@ h3 {
     display: none;
 }
 
-/* Innehåll i modalen */
 .modal-innehall {
     background-color: white;
     padding: 1rem;
@@ -196,7 +195,6 @@ h3 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Stäng-knappen */
 .stang-knapp {
     color: #aaa;
     float: right;
