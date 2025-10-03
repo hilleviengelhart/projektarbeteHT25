@@ -282,6 +282,39 @@ Bildspels-pilar
     transform: translateY(0);
 }
 
+/* 
+Filter & sorteringsfält
+ */
+.projekt-filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#projekt-filter {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+#projekt-sort {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #2c6fa3;
+    color: white;
+    cursor: pointer;
+}
+
+#projekt-sort:hover {
+    background-color: #1b4f7a;
+}
+
+
 
 /*
    Responsiv design

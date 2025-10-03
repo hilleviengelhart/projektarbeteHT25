@@ -79,10 +79,15 @@
     <!-- Projekt -->
     <div class="grid-projekt" id="minaProjekt">
       <h4>Mina projekt</h4>
-      <div id="projekt-lista" class="projekt-container"></div>
-    </div>
-+
+  <div class="projekt-filter-container">
+    <input type="text" id="projekt-filter" placeholder="Sök efter projekt..." />
+    <button id="projekt-sort">Sortera A → Ö</button>
   </div>
+
+  <div id="projekt-lista" class="projekt-container"></div>
+</div>
+    </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="minnaProjekt.js"></script>
