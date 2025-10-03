@@ -33,7 +33,6 @@ tillbakaBtn.addEventListener("click", () => {
 
 updateImage();
 
-// Stänger menyn
 document.querySelectorAll('#meny a').forEach(link => {
     link.addEventListener('click', () => {
         document.getElementById('menu-toggle').checked = false;
@@ -48,8 +47,6 @@ let allProjektData = [];
 const modal = document.getElementById('projekt-modal');
 const stangKnapp = document.querySelector('.stang-knapp');
 
-// Funktion för att skapa projekt-HTML
-// OBS! Tar emot index som andra argument för räkning (Projekt 1, Projekt 2, etc.)
 const skapaProjektHTML = ({ id, titel, kund, kort_beskrivning }, index) => {
 
     const rubrikPrefix = "Projekt " + index + ": ";
@@ -64,42 +61,31 @@ const skapaProjektHTML = ({ id, titel, kund, kort_beskrivning }, index) => {
         "</article>";
 };
 
-// Funktion för att visa modalen med detaljerad information
 const visaModal = (projectId) => {
-    // 1. Hitta rätt projekt i datan baserat på ID
     const projekt = allProjektData.find(p => p.id === projectId);
 
-    if (!projekt) return; // Gör inget om projektet inte hittas
+    if (!projekt) return;
 
-    // 2. Fyll modalen med data
     document.getElementById('modal-titel').textContent = "Projektets namn: " + projekt.titel;
     document.getElementById('modal-kund').textContent = "Kund: " + projekt.kund;
     document.getElementById('modal-beskrivning').textContent = "Beskrivning av projekt: " + projekt.kort_beskrivning;
     document.getElementById('modal-mer-info').textContent = projekt.mer_information;
 
-    // 3. Visa modalen
     modal.classList.remove('modal-dold');
 };
 
-
-// Huvudfunktion för att ladda och visa projekt
 const laddaProjekt = () => {
     projektLista.innerHTML = '<p>Laddar projekt...</p>';
 
     axios.get(JSON_FIL)
         .then(response => {
-            // SPARA DATAN TILL DEN GLOBALA VARIABELN
             allProjektData = response.data;
-            projektLista.innerHTML = ''; // Rensa 'Laddar projekt...'
-
-            // NY KOD: Använd forEach för att skicka med INDEX (räknaren)
+            projektLista.innerHTML = '';
             allProjektData.forEach((projekt, index) => {
-                // index + 1 gör att räkningen börjar på 1 istället för 0
                 const projektHTML = skapaProjektHTML(projekt, index + 1);
                 projektLista.innerHTML += projektHTML;
             });
 
-            // 4. Lägg till klick-lyssnare på de nya knapparna
             document.querySelectorAll('.se-projekt-knapp').forEach(knapp => {
                 knapp.addEventListener('click', (e) => {
                     const projektId = e.currentTarget.dataset.projektId;
@@ -114,7 +100,6 @@ const laddaProjekt = () => {
         });
 };
 
-// Logik för att stänga modalen (kopplad till X-knappen)
 stangKnapp.addEventListener('click', () => {
     modal.classList.add('modal-dold');
 });
