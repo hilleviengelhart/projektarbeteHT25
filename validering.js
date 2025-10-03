@@ -37,7 +37,7 @@ function validatePhone() {
 function validateEmail() {
   const value = emailInput.value.trim();
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!regex.test(value)) {
+  if (!regex.test(value)) { 
     emailFeedback.textContent = "Ange en giltig e-postadress.";
     emailFeedback.style.color = "red";
     return false;

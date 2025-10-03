@@ -138,7 +138,6 @@ p {
     transform: scale(1.05);          
 }
 
-/* --- Mobilanpassning med media queries --- */
 @media (min-width: 768px) {
 #menuIcon {
         display: none; 

@@ -11,17 +11,15 @@
 </head>
 <body>
 
-
-
-
-<!-- Header  -->
+<!-- Header och meny -->
 <header>
   <input type="checkbox" id="menu-toggle" />
   <label for="menu-toggle" id="menuIcon">&#9776;</label>
   <img src="logga.png" alt="Vår logga" />
   <ul id="meny">
+     
     <li><a href="#omMig">Om Mig</a></li>
-    <li><a href="#bilder">bilder</a></li>
+    <li><a href="#bilder">Bilder</a></li>
     <li><a href="#projekt">Projekt</a></li>
     <li><a href="huvudsida.html">Hem</a></li>
   </ul>
@@ -30,28 +28,38 @@
 <h1>Henrik Engelhart - UX-designer</h1>
 <img src="Anställd2.png" alt="Bild på anställd Henrik på Nexa systems" class="circular-image" />
 
-<p>Jag heter Henrik Engelhart och arbetar som UX-designer på Nexa Systems. I mitt arbete är jag engagerad i flera olika projekt där jag hjälper till att skapa användarvänliga och intuitiva digitala lösningar.</p>
-<p>Jag jobbar nära både användare och utvecklingsteam för att säkerställa att produkterna är både funktionella och engagerande.</p>
-<p>Mitt arbetssätt är användarcentrerat, vilket innebär att jag hela tiden utgår från användarnas behov och insikter.</p>
-<p>Jag arbetar iterativt med prototyper, användartester och feedback för att kontinuerligt förbättra användarupplevelsen.</p>
-<p>Mitt mål är att utveckla digitala tjänster som verkligen möter användarnas förväntningar och behov, samtidigt som de stärker Nexa Systems affär och konkurrenskraft.</p>
-<p>Jag vill göra tekniken så tillgänglig och effektiv som möjligt för alla användare.</p>
+<!-- Sektion: Om mig -->
+<section id="omMig">
+  <h2>Om Mig</h2>
+  <p>Jag heter Henrik Engelhart och arbetar som UX-designer på Nexa Systems. I mitt arbete hjälper jag till att skapa användarvänliga digitala lösningar.</p>
+  <p>Jag arbetar nära användare och utvecklarteam för att göra produkter enkla och tilltalande för alla.</p>
+  <p>Mitt arbetssätt är användarcentrerat, vilket innebär att jag hela tiden utgår från användarnas behov och insikter.</p>
+  <p>Jag arbetar iterativt med prototyper, användartester och feedback för att kontinuerligt förbättra användarupplevelsen.</p>
+  <p>Mitt mål är att utveckla digitala tjänster som verkligen möter användarnas förväntningar och behov, samtidigt som de stärker Nexa Systems affär och konkurrenskraft.</p>
+  <p>Jag vill göra tekniken så tillgänglig och effektiv som möjligt för alla användare.</p>
 
-<h2>Bilder från jobbet</h2>
-<div class="bildspel">
-  <!-- Bilder -->
-  <img src="hilleviBild.png" class="bild" style="display: none;">
-  <img src="hilleviBild2.png" class="bild" style="display: none;">
-  <img src="hilleviBild4.png" class="bild" style="display: none;">
-  <img src="hilleviBild3.png" class="bild" style="display: none;">
-  <!-- Knappar -->
-  <button id="knapp-bak">Föregående</button>
-  <button id="knapp-fram">Nästa</button>
-</div>
+</section>
 
-<h3>Mina projekt</h3>
-<div id="projektLista"></div>
+<!-- Sektion: Bilder från jobbet-->
+<section id="bilder">
+  <h2>Bilder från jobbet</h2>
+  <div class="bildspel">
+  
+    <img src="hilleviBild.png" class="bild" style="display: none;">
+    <img src="hilleviBild2.png" class="bild" style="display: none;">
+    <img src="hilleviBild4.png" class="bild" style="display: none;">
+    <img src="hilleviBild3.png" class="bild" style="display: none;">
+   
+    <button id="knapp-bak">Föregående</button>
+    <button id="knapp-fram">Nästa</button>
+  </div>
+</section>
 
+<!-- Sektion: Projekt -->
+<section id="projekt">
+  <h2>Mina projekt</h2>
+  <div id="projektLista"></div>
+</section>
 
 
 </body>
