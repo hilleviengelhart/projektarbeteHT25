@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const projektContainer = document.getElementById("projekt-lista");
   let allaProjekt = [];
 
-  // Simulerar Axios-anrop och visar listan med projekt
   axios.get("harunProject.json")
     .then(response => {
       allaProjekt = response.data;
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lista.forEach((projekt, index) => {
       const card = document.createElement("div");
       card.classList.add("projekt-card");
-      card.style.animationDelay = `${index * 0.1}s`;
+      card.style.animationDelay = `${index * 0.3}s`;
 
       card.innerHTML = `
             <h3>${projekt.titel}</h3>
@@ -27,9 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
             ${projekt.merInfo ? `<details><summary>Mer information</summary><p>${projekt.merInfo}</p></details>` : ""}
           `;
       projektContainer.appendChild(card);
+
+      setTimeout(() => {
+        card.classList.add('visible');
+      }, index * 350);
     });
   }
-  // --- Bildspel
+ 
   const slideImg = document.getElementById("slide-img");
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
@@ -51,19 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
   nextBtn.addEventListener("click", () => visaSlide(slideIndex + 1));
   visaSlide(slideIndex);
 
-  // --- Animationer vid skills ---
   document.querySelectorAll('.skill').forEach((skill, index) => {
     setTimeout(() => {
       skill.classList.add('animate');
-    }, index * 300); // varje skill startar 0.3s efter föregående
+    }, index * 300); 
   });
 
-  // Observera element som ska animeras vid scroll
-  document.querySelectorAll('.kompetenser-section').forEach(el => {
-    observer.observe(el);
-  });
-
-  // Filtrering och sortering - ej fungerande
   function applyFilterAndSort() {
     const search = filterInput.value.toLowerCase();
     const sortTyp = sortSelect.value;

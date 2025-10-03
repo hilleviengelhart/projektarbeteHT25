@@ -93,8 +93,18 @@
     border: 1.1px solid #1f4f73;
     max-width: 600px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-
+    opacity: 0; 
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards; 
 }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .projekt-card h3 {
     color: #2c6fa3;
@@ -138,4 +148,16 @@
 
 #next-btn {
     right: 10px;
+}
+
+#filter-input {
+    outline: 2px solid #2c6fa3;
+    outline-offset: 2px;
+    border-color: #2c6fa3;
+}
+
+#sort-select {
+    outline: 2px solid #2c6fa3;
+    outline-offset: 2px;
+    border-color: #2c6fa3;
 }
